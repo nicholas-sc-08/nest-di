@@ -1,7 +1,9 @@
 import { Module } from '@nestjs/common';
 import { ComputerService } from './computer.service';
+import { PowerModule } from '../power/power.module';
 
 @Module({
-  providers: [ComputerService]
+  imports: [PowerModule],
+  providers: [ComputerService],
 })
 export class ComputerModule {}
